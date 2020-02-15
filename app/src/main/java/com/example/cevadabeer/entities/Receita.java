@@ -3,28 +3,28 @@ package com.example.cevadabeer.entities;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Recipe {
+public class Receita {
 
     private double quantidade;
-    private Ingredient ingredient;
+    private Ingrediente ingrediente;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * No args constructor for use in serialization
      *
      */
-    public Recipe() {
+    public Receita() {
     }
 
     /**
      *
      * @param quantidade
-     * @param ingredient
+     * @param ingrediente
      */
-    public Recipe(double quantidade, Ingredient ingredient) {
+    public Receita(double quantidade, Ingrediente ingrediente) {
         super();
         this.quantidade = quantidade;
-        this.ingredient = ingredient;
+        this.ingrediente = ingrediente;
     }
 
     public double getQuantidade() {
@@ -35,12 +35,12 @@ public class Recipe {
         this.quantidade = quantidade;
     }
 
-    public Ingredient getIngredient() {
-        return ingredient;
+    public Ingrediente getIngrediente() {
+        return ingrediente;
     }
 
-    public void setIngredient(Ingredient ingredient) {
-        this.ingredient = ingredient;
+    public void setIngrediente(Ingrediente ingrediente) {
+        this.ingrediente = ingrediente;
     }
 
     public Map<String, Object> getAdditionalProperties() {

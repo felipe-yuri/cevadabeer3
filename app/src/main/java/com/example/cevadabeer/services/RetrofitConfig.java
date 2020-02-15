@@ -14,15 +14,15 @@ public class RetrofitConfig {
                 .build();
     }
 
-    public BeerService getBeerService() {
-        return this.retrofit.create(BeerService.class);
+    public CervejaService getCervejaService() {
+        return this.retrofit.create(CervejaService.class);
     }
 
-    public IngredientService getIngredientService() {
-        return this.retrofit.create(IngredientService.class);
+    public IngredienteService getIngredienteService() {
+        return this.retrofit.create(IngredienteService.class);
     }
 
-    public ProductionService getProductService() {
-        return this.retrofit.create(ProductionService.class);
+    public ProducaoService getProducaoService() {
+        return this.retrofit.create(ProducaoService.class);
     }
 }

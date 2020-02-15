@@ -1,6 +1,6 @@
 package com.example.cevadabeer.services;
 
-import com.example.cevadabeer.entities.Brewery;
+import com.example.cevadabeer.entities.Cerveja;
 
 import java.util.List;
 
@@ -8,11 +8,11 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
-public interface BeerService {
+public interface CervejaService {
 
     @GET("cerveja")
-    Call<List<Brewery>> buscarBrewery();
+    Call<List<Cerveja>> searchBrewery();
 
     @GET("cerveja/{id}")
-    Call<List<Brewery>> buscarBreweryId(@Path("id") String id);
+    Call<List<Cerveja>> searchBreweryId(@Path("id") String id);
 }

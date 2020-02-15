@@ -1,6 +1,6 @@
 package com.example.cevadabeer.entities;
 
-public class Ingredient {
+public class Ingrediente {
 
     private int id;
     private String nome;
@@ -10,7 +10,7 @@ public class Ingredient {
      * No args constructor for use in serialization
      *
      */
-    public Ingredient() {
+    public Ingrediente() {
     }
 
     /**
@@ -19,7 +19,7 @@ public class Ingredient {
      * @param id
      * @param quantidade
      */
-    public Ingredient(int id, String nome, double quantidade) {
+    public Ingrediente(int id, String nome, double quantidade) {
         this.id = id;
         this.nome = nome;
         this.quantidade = quantidade;

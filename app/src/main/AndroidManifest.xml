@@ -16,15 +16,15 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
     <activity
-        android:name=".activities.RecipesActivity"
+        android:name=".activities.ReceitasActivity"
         android:label="@string/title_activity_recipes"
         android:theme="@style/AppTheme.NoActionBar"></activity>
     <activity
-        android:name=".activities.ProductionActivity"
+        android:name=".activities.ProducaoActivity"
         android:label="@string/title_activity_production"
         android:theme="@style/AppTheme.NoActionBar" />
     <activity
-        android:name=".activities.StockActivity"
+        android:name=".activities.EstoqueActivity"
         android:label="@string/title_activity_stock"
         android:theme="@style/AppTheme.NoActionBar" />
 

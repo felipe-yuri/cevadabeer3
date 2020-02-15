@@ -4,7 +4,7 @@ package com.example.cevadabeer.entities;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Brewery {
+public class Cervejaria {
 
     private int id;
     private String nome;
@@ -20,7 +20,7 @@ public class Brewery {
      * No args constructor for use in serialization
      *
      */
-    public Brewery() {
+    public Cervejaria() {
     }
 
     /**
@@ -34,7 +34,7 @@ public class Brewery {
      * @param tipoLogradouro
      * @param user
      */
-    public Brewery(int id, String nome, String tipoLogradouro, String nomeRua, String numero, String cidade, String estado, User user) {
+    public Cervejaria(int id, String nome, String tipoLogradouro, String nomeRua, String numero, String cidade, String estado, User user) {
         super();
         this.id = id;
         this.nome = nome;

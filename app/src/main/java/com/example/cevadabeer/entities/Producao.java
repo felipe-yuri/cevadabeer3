@@ -1,39 +1,35 @@
 package com.example.cevadabeer.entities;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class Production {
+public class Producao {
 
     private int id;
     private int quantidadeEmLitros;
     private String dtInicio;
     private String dtFim;
-    private Beer beer;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Cerveja cerveja;
 
     /**
      * No args constructor for use in serialization
      *
      */
-    public Production() {
+    public Producao() {
     }
 
     /**
      *
-     * @param beer
+     * @param cerveja
      * @param id
      * @param dtInicio
      * @param dtFim
      * @param quantidadeEmLitros
      */
-    public Production(int id, int quantidadeEmLitros, String dtInicio, String dtFim, Beer beer) {
+    public Producao(int id, int quantidadeEmLitros, String dtInicio, String dtFim, Cerveja cerveja) {
         super();
         this.id = id;
         this.quantidadeEmLitros = quantidadeEmLitros;
         this.dtInicio = dtInicio;
         this.dtFim = dtFim;
-        this.beer = beer;
+        this.cerveja = cerveja;
     }
 
     public int getId() {
@@ -68,20 +64,12 @@ public class Production {
         this.dtFim = dtFim;
     }
 
-    public Beer getBeer() {
-        return beer;
+    public Cerveja getCerveja() {
+        return cerveja;
     }
 
-    public void setBeer(Beer beer) {
-        this.beer = beer;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
+    public void setCerveja(Cerveja cerveja) {
+        this.cerveja = cerveja;
     }
 
 }

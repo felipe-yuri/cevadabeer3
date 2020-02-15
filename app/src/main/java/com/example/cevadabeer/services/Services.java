@@ -3,7 +3,7 @@ package com.example.cevadabeer.services;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.cevadabeer.entities.Ingredient;
+import com.example.cevadabeer.entities.Ingrediente;
 
 import java.util.List;
 
@@ -19,16 +19,16 @@ public class Services {
     public void loadIngredientService() {
 //        campo = (TextView) findById
 
-        Call<List<Ingredient>> call = new RetrofitConfig().getIngredientService().buscarIngredient();
-        call.enqueue(new Callback<List<Ingredient>>() {
+        Call<List<Ingrediente>> call = new RetrofitConfig().getIngredienteService().buscarIngredient();
+        call.enqueue(new Callback<List<Ingrediente>>() {
 
             @Override
-            public void onResponse(Call<List<Ingredient>> call, Response<List<Ingredient>> response) {
+            public void onResponse(Call<List<Ingrediente>> call, Response<List<Ingrediente>> response) {
                 if (!response.isSuccessful()) {
                     campo.setText("Código: " + response.code());
                 }
-                List<Ingredient> lista = response.body();
-                for (Ingredient ingrediente : lista) {
+                List<Ingrediente> lista = response.body();
+                for (Ingrediente ingrediente : lista) {
 
                     campo.append(
                             "id: " + ingrediente.getId() +
@@ -40,8 +40,8 @@ public class Services {
             }
 
             @Override
-            public void onFailure(Call<List<Ingredient>> call, Throwable t) {
-                Log.e("IngredientService   ", "Erro ao buscar ingrediente" + t.getMessage());
+            public void onFailure(Call<List<Ingrediente>> call, Throwable t) {
+                Log.e("IngredienteService   ", "Erro ao buscar ingrediente" + t.getMessage());
             }
         });
     }

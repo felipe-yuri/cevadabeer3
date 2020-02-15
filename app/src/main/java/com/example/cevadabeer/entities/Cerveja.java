@@ -2,7 +2,7 @@ package com.example.cevadabeer.entities;
 
 import java.util.List;
 
-public class Beer {
+public class Cerveja {
 
     private int id;
     private String cor;
@@ -12,18 +12,16 @@ public class Beer {
     private double ibu;
     private int diasMaturacao;
     private String conplexidade;
-    private Brewery brewery;
-    private List<Recipe> receita = null;
+    private Cervejaria cervejaria;
+    private List<Receita> receita;
 
     /**
      * No args constructor for use in serialization
-     *
      */
-    public Beer() {
+    public Cerveja() {
     }
 
     /**
-     *
      * @param diasMaturacao
      * @param estilo
      * @param receita
@@ -31,11 +29,11 @@ public class Beer {
      * @param nome
      * @param conplexidade
      * @param id
-     * @param brewery
+     * @param cervejaria
      * @param ibu
      * @param teorAlcoolico
      */
-    public Beer(int id, String cor, double teorAlcoolico, String estilo, String nome, double ibu, int diasMaturacao, String conplexidade, Brewery brewery, List<Recipe> receita) {
+    public Cerveja(int id, String cor, double teorAlcoolico, String estilo, String nome, double ibu, int diasMaturacao, String conplexidade, Cervejaria cervejaria, List<Receita> receita) {
         this.id = id;
         this.cor = cor;
         this.teorAlcoolico = teorAlcoolico;
@@ -44,7 +42,7 @@ public class Beer {
         this.ibu = ibu;
         this.diasMaturacao = diasMaturacao;
         this.conplexidade = conplexidade;
-        this.brewery = brewery;
+        this.cervejaria = cervejaria;
         this.receita = receita;
     }
 
@@ -112,19 +110,19 @@ public class Beer {
         this.conplexidade = conplexidade;
     }
 
-    public Brewery getBrewery() {
-        return brewery;
+    public Cervejaria getCervejaria() {
+        return cervejaria;
     }
 
-    public void setBrewery(Brewery brewery) {
-        this.brewery = brewery;
+    public void setCervejaria(Cervejaria cervejaria) {
+        this.cervejaria = cervejaria;
     }
 
-    public List<Recipe> getReceita() {
+    public List<Receita> getReceita() {
         return receita;
     }
 
-    public void setReceita(List<Recipe> receita) {
+    public void setReceita(List<Receita> receita) {
         this.receita = receita;
     }
 
