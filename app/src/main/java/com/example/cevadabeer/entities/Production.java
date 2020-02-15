@@ -3,7 +3,7 @@ package com.example.cevadabeer.entities;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Product {
+public class Production {
 
     private int id;
     private int quantidadeEmLitros;
@@ -16,7 +16,7 @@ public class Product {
      * No args constructor for use in serialization
      *
      */
-    public Product() {
+    public Production() {
     }
 
     /**
@@ -27,7 +27,7 @@ public class Product {
      * @param dtFim
      * @param quantidadeEmLitros
      */
-    public Product(int id, int quantidadeEmLitros, String dtInicio, String dtFim, Beer beer) {
+    public Production(int id, int quantidadeEmLitros, String dtInicio, String dtFim, Beer beer) {
         super();
         this.id = id;
         this.quantidadeEmLitros = quantidadeEmLitros;

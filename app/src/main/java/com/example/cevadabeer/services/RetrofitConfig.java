@@ -22,7 +22,7 @@ public class RetrofitConfig {
         return this.retrofit.create(IngredientService.class);
     }
 
-    public ProductService getProductService() {
-        return this.retrofit.create(ProductService.class);
+    public ProductionService getProductService() {
+        return this.retrofit.create(ProductionService.class);
     }
 }
