@@ -1,16 +1,13 @@
 package com.example.cevadabeer.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.cevadabeer.R;
+import com.example.cevadabeer.entities.Production;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -18,14 +15,20 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+    }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+    public void loadStockActivity(View view){
+        Intent intent = new Intent(this, StockActivity.class);
+        startActivity(intent);
+    }
+
+    public void loadProductionActivity(View view){
+        Intent intent = new Intent(this, ProductionActivity.class);
+        startActivity(intent);
+    }
+
+    public void loadRecipesActivity(View view){
+        Intent intent = new Intent(this, RecipesActivity.class);
+        startActivity(intent);
     }
 }
