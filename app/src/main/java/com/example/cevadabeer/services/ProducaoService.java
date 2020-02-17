@@ -10,8 +10,8 @@ import retrofit2.http.Path;
 
 public interface ProducaoService {
     @GET("producao")
-    Call<List<Producao>> searchProduct();
+    Call<List<Producao>> buscarProducao();
 
     @GET("producao/{id}")
-    Call<List<Producao>> searchProductId(@Path("id") String id);
+    Call<List<Producao>> buscarProducaoId(@Path("id") String id);
 }

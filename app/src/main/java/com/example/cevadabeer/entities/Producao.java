@@ -1,11 +1,16 @@
 package com.example.cevadabeer.entities;
 
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Producao {
 
     private int id;
-    private int quantidadeEmLitros;
-    private String dtInicio;
-    private String dtFim;
+    private double quantidadeEmLitros;
+    private Date dtInicio;
+    private Date dtFim;
     private Cerveja cerveja;
 
     /**
@@ -23,12 +28,16 @@ public class Producao {
      * @param dtFim
      * @param quantidadeEmLitros
      */
-    public Producao(int id, int quantidadeEmLitros, String dtInicio, String dtFim, Cerveja cerveja) {
+    public Producao(int id, int quantidadeEmLitros, String dtInicio, String dtFim, Cerveja cerveja) throws ParseException {
         super();
         this.id = id;
         this.quantidadeEmLitros = quantidadeEmLitros;
-        this.dtInicio = dtInicio;
-        this.dtFim = dtFim;
+
+        SimpleDateFormat df = new SimpleDateFormat ("dd/MM/yyyy");
+        df.setLenient(false);
+
+        this.dtInicio = df.parse(dtInicio);
+        this.dtFim = df.parse(dtFim);
         this.cerveja = cerveja;
     }
 
@@ -40,27 +49,27 @@ public class Producao {
         this.id = id;
     }
 
-    public int getQuantidadeEmLitros() {
+    public double getQuantidadeEmLitros() {
         return quantidadeEmLitros;
     }
 
-    public void setQuantidadeEmLitros(int quantidadeEmLitros) {
+    public void setQuantidadeEmLitros(double quantidadeEmLitros) {
         this.quantidadeEmLitros = quantidadeEmLitros;
     }
 
-    public String getDtInicio() {
+    public Date getDtInicio() {
         return dtInicio;
     }
 
-    public void setDtInicio(String dtInicio) {
+    public void setDtInicio(Date dtInicio) {
         this.dtInicio = dtInicio;
     }
 
-    public String getDtFim() {
+    public Date getDtFim() {
         return dtFim;
     }
 
-    public void setDtFim(String dtFim) {
+    public void setDtFim(Date dtFim) {
         this.dtFim = dtFim;
     }
 
