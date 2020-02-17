@@ -10,9 +10,9 @@ import retrofit2.http.Path;
 
 public interface IngredienteService {
     @GET("ingrediente")
-    Call<List<Ingrediente>> buscarIngredient();
+    Call<List<Ingrediente>> buscarIngrediente();
 
     @GET("ingrediente/{id}")
-    Call<List<Ingrediente>> buscarIngredientId(@Path("id") String id);
+    Call<List<Ingrediente>> buscarIngredienteId(@Path("id") String id);
 
 }

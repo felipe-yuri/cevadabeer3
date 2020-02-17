@@ -39,7 +39,7 @@ public class ReceitasActivity extends AppCompatActivity {
     public void carregarListaCerveja() {
 
         //Chama o endpoint /cerveja
-        Call<List<Cerveja>> call = new RetrofitConfig().getCervejaService().searchBrewery();
+        Call<List<Cerveja>> call = new RetrofitConfig().getCervejaService().buscarCerveja();
         call.enqueue(new Callback<List<Cerveja>>() {
 
 

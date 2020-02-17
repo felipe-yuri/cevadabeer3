@@ -11,8 +11,8 @@ import retrofit2.http.Path;
 public interface CervejaService {
 
     @GET("cerveja")
-    Call<List<Cerveja>> searchBrewery();
+    Call<List<Cerveja>> buscarCerveja();
 
     @GET("cerveja/{id}")
-    Call<List<Cerveja>> searchBreweryId(@Path("id") String id);
+    Call<List<Cerveja>> buscarCervejaId(@Path("id") String id);
 }

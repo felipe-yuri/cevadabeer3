@@ -36,7 +36,7 @@ public class IngredienteAdapter extends RecyclerView.Adapter<IngredienteAdapter.
 
             Ingrediente ingrediente = dadosIngrediente.get(position);
             holder.nomeIngrediente.setText(ingrediente.getNome());
-            holder.quantidadeIngrediente.setText(Double.toString(ingrediente.getQuantidade()));
+            holder.quantidadeIngrediente.setText(Double.toString(ingrediente.getQuantidade()) + " g");
         }
     }
 

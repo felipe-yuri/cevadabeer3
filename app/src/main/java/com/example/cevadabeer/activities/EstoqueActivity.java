@@ -39,7 +39,7 @@ public class EstoqueActivity extends AppCompatActivity {
     public void carregarListaIngredientes() {
 
         //Chama o endpoint /ingrediente
-        Call<List<Ingrediente>> call = new RetrofitConfig().getIngredienteService().buscarIngredient();
+        Call<List<Ingrediente>> call = new RetrofitConfig().getIngredienteService().buscarIngrediente();
         call.enqueue(new Callback<List<Ingrediente>>() {
 
 

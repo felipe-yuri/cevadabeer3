@@ -13,7 +13,6 @@ import com.example.cevadabeer.control.ProducaoAdapter;
 import com.example.cevadabeer.entities.Producao;
 import com.example.cevadabeer.services.RetrofitConfig;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -35,10 +34,17 @@ public class ProducaoActivity extends AppCompatActivity {
         listaDadosProducao.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         listaDadosProducao.setLayoutManager(linearLayoutManager);
+        carregarListaProducao();
+    }
 
+    public void carregarListaProducao() {
+
+        //Chama o endpoint /producao
         Call<List<Producao>> call = new RetrofitConfig().getProducaoService().buscarProducao();
 
         call.enqueue(new Callback<List<Producao>>() {
+            public List<Producao> lista;
+            public ProducaoActivity producaoActivity = new ProducaoActivity();
 
             @Override
             public void onResponse(Call<List<Producao>> call, Response<List<Producao>> response) {
@@ -47,7 +53,6 @@ public class ProducaoActivity extends AppCompatActivity {
                 }
                 List<Producao> lista = response.body();
                 producaoAdapter = new ProducaoAdapter(lista);
-
                 listaDadosProducao.setAdapter(producaoAdapter);
             }
 
@@ -57,36 +62,8 @@ public class ProducaoActivity extends AppCompatActivity {
             }
 
         });
-    }
 
-//    public void carregarListaProducao() {
-//
-//        //Chama o endpoint /producao
-//        Call<List<Producao>> call = new RetrofitConfig().getProducaoService().searchProduct();
-//
-//        call.enqueue(new Callback<List<Producao>>() {
-//            public List<Producao> lista;
-//            public ProducaoActivity producaoActivity = new ProducaoActivity();
-//
-//            @Override
-//            public void onResponse(Call<List<Producao>> call, Response<List<Producao>> response) {
-//                if (!response.isSuccessful()) {
-//                    Log.e("ProducaoService", "Código: " + response.code());
-//                }
-//                this.lista = response.body();
-//                for (Producao producao : lista){
-//                    producaoActivity.getListaReg().add(producao);
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<Producao>> call, Throwable t) {
-//                Log.e("IngredienteService   ", "Erro ao buscar ingrediente" + t.getMessage());
-//            }
-//
-//        });
-//
-//    }
+    }
 
 
 }
