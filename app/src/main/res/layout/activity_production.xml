@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
@@ -37,16 +38,14 @@
                     android:text="Produção"
                     android:textColor="#F17F06"
                     android:textSize="50sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
 
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
-            <androidx.recyclerview.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvListaProducao"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

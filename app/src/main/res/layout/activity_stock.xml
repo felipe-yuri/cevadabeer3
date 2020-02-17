@@ -7,37 +7,51 @@
     android:fitsSystemWindows="true"
     tools:context=".activities.EstoqueActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#5A5858"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <TextView
+                    android:id="@+id/tvTituloEstoque"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Estoque"
+                    android:textColor="#F17F06"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    app:fontFamily="serif" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListaIngrediente"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            android:background="#5A5858"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:scrollbars="vertical"
+            tools:listitem="@layout/lista_ingrediente"/>
 
-            <TextView
-                android:id="@+id/tvTituloReceitas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="Estoque"
-                android:textColor="#F17F06"
-                android:textSize="50sp"
-                android:textStyle="bold"
-                app:fontFamily="serif" />
-
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

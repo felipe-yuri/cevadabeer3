@@ -42,7 +42,6 @@ public class ReceitasActivity extends AppCompatActivity {
         Call<List<Cerveja>> call = new RetrofitConfig().getCervejaService().searchBrewery();
         call.enqueue(new Callback<List<Cerveja>>() {
 
-            private List<Cerveja> lista;
 
             @Override
             public void onResponse(Call<List<Cerveja>> call, Response<List<Cerveja>> response) {
